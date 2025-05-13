@@ -16,31 +16,55 @@ h2 {
 
 /* Menu */
 
-nav {
+header {
   background-color: #333;
-  color: white;
+  box-shadow: 0px 3px 10px black;
+}
 
+.navbar {
   display: flex;
-  align-items: end;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-nav ul {
-  list-style: none;
+.logo {
   display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  align-items: center;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-#logo-jr {
+.logo img {
   width: 100px;
   height: 100px;
-  margin-left: 3rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.menu-mobile {
+  display: none;
 }
 
 /* Primeira section */
@@ -213,11 +237,6 @@ footer ul li img {
 }
 
 @media (max-width: 1112px) {
-  nav ul {
-    gap: 10px;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
   #home {
     flex-direction: row;
     align-items: center;
@@ -256,9 +275,41 @@ footer ul li img {
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    gap: 5px;
+  .navbar {
+    padding: 1rem 3rem;
   }
+
+  .nav-item {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 50%;
+  }
+
+  .mobile-menu-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-mobile .nav-item {
+    display: block;
+    padding-top: 1rem;
+  }
+
   #home {
     flex-direction: column;
     align-items: center;
@@ -277,10 +328,11 @@ footer ul li img {
   }
 
   #img-perfil img {
-    width: 80%;
+    width: 90%;
     height: auto;
-    max-width: 200px;
-    max-height: 200px;
+    min-width: 100px;
+    min-height: 100px;
+    margin-left: 10%;
   }
 
   #curriculo-content {
@@ -322,5 +374,9 @@ footer ul li img {
   .projeto p {
     font-size: 0.9rem;
     text-align: justify;
+  }
+
+  .open {
+    display: block;
   }
 }

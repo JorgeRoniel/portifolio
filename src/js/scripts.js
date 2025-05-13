@@ -33,3 +33,13 @@ sr.reveal("#curriculo", {
 sr.reveal("#projetos", {
   duration: 2000,
 });
+
+function showMenu() {
+  var menu = document.querySelector(".menu-mobile");
+
+  if (menu.classList.contains("open")) {
+    menu.classList.remove("open");
+  } else {
+    menu.classList.add("open");
+  }
+}

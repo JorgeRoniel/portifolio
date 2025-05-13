@@ -9,14 +9,33 @@
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
-    <nav>
-      <img src="./src/img/jR(1).png" alt="logo-jorge" id="logo-jr" />
-      <ul>
-        <li><a href="#curriculo">Currículo</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./src/img/jR(1).png" alt="logo-jorge" id="logo-jr" />
+        </div>
+
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a class="nav-link" href="#curriculo">Currículo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-icon">
+          <button onclick="showMenu()"><img class="icon" src="./src/img/cardapio.png" alt=""></button>
+        </div>
+      </nav>
+
+      <div class="menu-mobile">
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="#curriculo">Currículo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </header>
     <section id="home">
       <div id="content-home">
         <h1>Sobre mim</h1>
